@@ -6,7 +6,7 @@ let clients = new Set();
 server.on("connection", function(socket) {
     clients.add(socket);
 
-    socket.on("massage", function(massage){
+    socket.on("message", function(massage){
    for (let client of clients){
    	client.send(massage);
    }
